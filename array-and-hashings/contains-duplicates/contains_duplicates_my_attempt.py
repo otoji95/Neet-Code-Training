@@ -30,3 +30,7 @@ x = [1, 2, 3, 4]
 print(containsDuplicates(x))
 x = [1, 1, 1, 3, 3, 4, 3, 2, 4, 2]
 print(containsDuplicates(x))
+
+# Time complexity: O(n)
+
+# Space complexity: O(n)

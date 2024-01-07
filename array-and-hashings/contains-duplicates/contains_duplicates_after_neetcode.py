@@ -36,20 +36,6 @@ print(containsDuplicates(x))
 # From my understanding this way is better because it has a chance
 # of finding the duplicate while iterating through the array.
 
-# NeetCode way
+# Time Complexity: O(1) - O(n)
 
-# Time Complexity
-# Best case O(1)
-# Worst case O(n)
-
-# Space Complexity
-# Best case O(1)
-# Worst case O(n)
-
-
-# My way
-# Time complexity
-# Always O(n)
-
-# Space complexity
-# Always O(n)
+# Space Complexity: O(1) - O(n)
