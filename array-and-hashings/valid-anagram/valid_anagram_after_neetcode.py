@@ -3,26 +3,24 @@
 # rearranging the letters of a different word or phrase, typically
 # using all the original letters exactly once.
 
-# Example 1:
-
-# Input: s = "anagram", t = "nagaram"
-# Output: true
-# Example 2:
-
-# Input: s = "rat", t = "car"
-# Output: false
-
 
 # for better time complexity
 def is_anagram(s: str, t: str) -> bool:
     if len(s) != len(t):
         return False
+    # Checks if length of each string are equal. If they are not, it returns False
 
     countS, countT = {}, {}
+    # create two dictionaries, one for each string to track each characters count.
+
     for i in range(len(s)):
         countS[s[i]] = 1 + countS.get(s[i], 0)
         countT[t[i]] = 1 + countT.get(t[i], 0)
+    # Iterates through each character in the strings and adds their elements as
+    # keys paired with their count as the value.
+
     return countS == countT
+    # Iterates through each dictionary and checks to make sure that key and value pairs match.
 
 
 # for better space complexity
@@ -35,23 +33,12 @@ def is_anagram2(s: str, t: str) -> bool:
 x = "anagram"
 y = "nagaram"
 print(is_anagram(x, y))
+# True
 
 x = "rat"
 y = "car"
 print(is_anagram(x, y))
-
-# From my understanding my way may be slightly better because with this
-# current implementation, the function iterates through both strings
-# in their entirety, then compares the dictionaries to one another,
-# returning True or False if they are identical.
-
-# My way iterates through string 's' and creates a hashmap of its
-# characters and their count. Then, iterates through 't' to check if
-# the characters of 't' are in the 's' hashmap. If it comes across a
-# letter that is not in 's' or the count of each characters is not 0,
-# it will return False. If not returns True. It's only "better" because
-# there is a chance of NOT having to iterate through all of 't' based on
-# luck.
+# False
 
 
 # Method 1:

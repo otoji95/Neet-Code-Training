@@ -18,10 +18,17 @@
 
 def containsDuplicates(nums) -> bool:
     hash_set = set()
+    # creates set track each number
+
     for n in nums:
+        # iterates through each number in nums
         if n in hash_set:
+            # if it finds a number thats already in that set, returns True
             return True
+        # if not in set adds number
         hash_set.add(n)
+
+    # returns False if it makes it through the Array if there are no duplicates.
     return False
 
 
@@ -31,10 +38,6 @@ x = [1, 2, 3, 4]
 print(containsDuplicates(x))
 x = [1, 1, 1, 3, 3, 4, 3, 2, 4, 2]
 print(containsDuplicates(x))
-
-
-# From my understanding this way is better because it has a chance
-# of finding the duplicate while iterating through the array.
 
 # Time Complexity: O(1) - O(n)
 
