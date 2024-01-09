@@ -16,7 +16,7 @@
 # Output: true
 
 
-def containsDuplicates(nums) -> bool:
+def contains_duplicates(nums) -> bool:
     hash_set = set()
     # creates set track each number
 
@@ -33,11 +33,11 @@ def containsDuplicates(nums) -> bool:
 
 
 x = [1, 2, 3, 1]
-print(containsDuplicates(x))
+print(contains_duplicates(x))
 x = [1, 2, 3, 4]
-print(containsDuplicates(x))
+print(contains_duplicates(x))
 x = [1, 1, 1, 3, 3, 4, 3, 2, 4, 2]
-print(containsDuplicates(x))
+print(contains_duplicates(x))
 
 # Time Complexity: O(1) - O(n)
 

@@ -16,7 +16,7 @@
 # Output: true
 
 
-def containsDuplicates(nums) -> bool:
+def contains_duplicates(nums) -> bool:
     # First Step in my mind would be to turn the list of nums into a set.
     # since sets do not have repeatable numbers. Then to compare the
     # length of the set of nums vs the length of nums. If they are equal,
