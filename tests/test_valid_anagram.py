@@ -43,7 +43,6 @@ def generate_string_and_reverse(size=10000):
 
 
 # Test with stats
-@profile
 def test_anagram_stats():
     original, reversed_str = generate_string_and_reverse()
 
