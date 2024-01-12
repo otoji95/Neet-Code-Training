@@ -42,7 +42,7 @@ def generate_string_and_reverse(size=10000):
     return original_string, reversed_string
 
 
-# Test with stats
+# Test with stats is_anagram (time)
 def test_anagram_stats():
     original, reversed_str = generate_string_and_reverse()
 
@@ -51,10 +51,28 @@ def test_anagram_stats():
     result = is_anagram(original, reversed_str)
     end_time = time.time()
     elapsed_time_ms = (end_time - start_time) * 1000
-    print(f"\n\nTime taken for anagram test: {elapsed_time_ms:.3f} ms")
+    print(f"\n\nApproximate Time (time): {elapsed_time_ms:.3f} ms")
 
     # Memory profiling
     mem_usage = memory_usage((is_anagram, (original, reversed_str)))
-    print(f"\nPeak memory usage for anagram test: {max(mem_usage):.2f} MiB \n")
+    print(f"\nPeak Memory Usage (time): {max(mem_usage):.2f} MiB \n")
+
+    assert result == True
+
+
+# Test with stats is_anagram2 (space)
+def test_anagram2_stats():
+    original, reversed_str = generate_string_and_reverse()
+
+    # Time profiling
+    start_time = time.time()
+    result = is_anagram2(original, reversed_str)
+    end_time = time.time()
+    elapsed_time_ms = (end_time - start_time) * 1000
+    print(f"\n\nApproximate Time (space): {elapsed_time_ms:.3f} ms")
+
+    # Memory profiling
+    mem_usage = memory_usage((is_anagram, (original, reversed_str)))
+    print(f"\nPeak Memory Usage (space): {max(mem_usage):.2f} MiB \n")
 
     assert result == True

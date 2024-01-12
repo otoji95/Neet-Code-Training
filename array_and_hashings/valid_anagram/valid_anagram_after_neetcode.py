@@ -24,21 +24,8 @@ def is_anagram(s: str, t: str) -> bool:
 
 
 # for better space complexity
-
-
 def is_anagram2(s: str, t: str) -> bool:
     return sorted(s) == sorted(t)
-
-
-x = "anagram"
-y = "nagaram"
-print(is_anagram(x, y))
-# True
-
-x = "rat"
-y = "car"
-print(is_anagram(x, y))
-# False
 
 
 # Method 1:

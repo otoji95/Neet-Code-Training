@@ -26,6 +26,6 @@ def test_two_sum_random_time_and_memory():
 
     # Memory Profiling
     mem_usage = memory_usage((two_sum, (nums, 19999)))
-    print(f"\nPeak memory usage: {max(mem_usage):.2f} MiB \n")
+    print(f"\nPeak Memory Usage: {max(mem_usage):.2f} MiB \n")
 
     assert result == [9999, 10000]

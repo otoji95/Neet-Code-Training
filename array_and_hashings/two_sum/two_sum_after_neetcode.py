@@ -14,20 +14,5 @@ def two_sum(nums, target):
         prev_map[n] = i
 
 
-x = [2, 7, 11, 15]
-y = 9
-print(two_sum(x, y))
-# [0,1]
-
-x = [3, 2, 4]
-y = 6
-print(two_sum(x, y))
-# [1,2]
-
-x = [3, 3]
-y = 6
-print(two_sum(x, y))
-# [0,1]
-
 # Time Complexity: O(n)
 # Space Complexity: O(n)

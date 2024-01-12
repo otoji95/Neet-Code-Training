@@ -32,6 +32,6 @@ def test_worst_case_no_dupes():
 
     # Memory Profiling
     mem_usage = memory_usage((contains_duplicates, (nums,)))
-    print(f"\nPeak memory usage: {max(mem_usage):.2f} MiB \n")
+    print(f"\nPeak Memory Usage: {max(mem_usage):.2f} MiB \n")
 
     assert result == False
