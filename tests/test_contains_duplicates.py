@@ -1,7 +1,7 @@
 from array_and_hashings.contains_duplicates.contains_duplicates_after_neetcode import (
     contains_duplicates,
 )
-from memory_profiler import memory_usage
+from memory_profiler import profile
 import time
 
 
@@ -18,7 +18,8 @@ def test_large_list_no_duplicates():
     assert contains_duplicates(nums) == False
 
 
-def test_worst_case_no_dupes():
+@profile
+def test_worst_case_with_stats():
     nums = list(range(9999))
     nums.append(9999)
     nums.append(10000)
@@ -29,9 +30,5 @@ def test_worst_case_no_dupes():
     end_time = time.time()
     elapsed_time_ms = (end_time - start_time) * 1000
     print(f"\n\n Approximate time: {elapsed_time_ms:.2f} ms")
-
-    # Memory Profiling
-    mem_usage = memory_usage((contains_duplicates, (nums,)))
-    print(f"\nPeak Memory Usage: {max(mem_usage):.2f} MiB \n")
 
     assert result == False

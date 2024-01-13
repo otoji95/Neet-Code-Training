@@ -29,4 +29,4 @@ def group_anagrams(strs):
 
 # Time Complexity: O(kn) k being length of string
 
-# Space Complexity
+# Space Complexity: O(kn)
